@@ -53,6 +53,10 @@ int main() {
 	string animals[][3] = { { "fox", "dog", "wolf" }, { "lizard", "snake",
 			"turtle" } };
 
+	cout << "output of sizeof(animals[0] / sizeof(string): " << endl << ""
+			<< sizeof(animals[0]) / sizeof(string) << endl;
+	cout << endl;
+
 	for (int i = 0; i < 2; i++) {
 		for (int j = 0; j < 3; j++) {
 
@@ -61,6 +65,42 @@ int main() {
 		}
 
 		cout << endl;
+	}
+
+	int valuesB[] = { 3, 6, 4, 88, 5 };
+
+	cout << sizeof(valuesB[0]) << endl;  // 4 bytes of memory
+	cout << sizeof(valuesB) << endl; // 20 bytes of memory
+	cout << sizeof(int) << endl;     // 4 bytes
+
+	// int for index  must be unsigned in this circumstance
+	for (unsigned int i = 0; i < sizeof(valuesB) / sizeof(int); i++) {
+		cout << valuesB[i] << ", " << flush;
+	}
+	cout << endl;
+
+
+	//*********brisk practice of switches in C++
+
+	//char is intended to store bytes but its actually an integer type, as is long as well.
+	//break; must be used
+	int input;
+	cout << "Input the magic number 1 - 5" << endl;
+	cin >> input;
+
+	switch (input) {
+
+	case 0:
+		cout << "Hello 0" << endl;
+		break;
+	case 1:
+		cout << "Hello 1" << endl;
+		break;
+	case 3:
+		cout << "Hello 1" << endl;
+		break;
+	default:
+		cout << "Default" << endl;
 	}
 
 	return 0;
