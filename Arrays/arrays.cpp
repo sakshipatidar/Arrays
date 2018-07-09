@@ -2,7 +2,7 @@
  * arrays.cpp
  *
  *  Created on: Jul 9, 2018
- *      Author: justi
+ *      Author: Nathaniel Parizi
  */
 
 #include <iostream>
@@ -30,14 +30,22 @@ int main() {
 	int emptyArr[8] = { };
 
 	for (int i = 0; i < 8; i++) {
-		cout << i+1 << "  " << flush;
+		cout << i + 1 << "  " << flush;
 	}
 	cout << endl;
 	for (int i = 0; i < 8; i++) {
 
 		cout << emptyArr[i] * emptyArr[i] << ", " << flush;
 	}
+	//check
+	cout << endl;
+	string texts[] = { "apples", "kiwi", "dragonfruit" };
+	cout << endl;
 
+	for (int i = 0; i < 3; i++) {
+
+		cout << "Element at index " << i << ": " << texts[i] << endl;
+	}
 	return 0;
 
 }
