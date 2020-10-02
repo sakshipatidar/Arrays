@@ -5,42 +5,34 @@
  *      Author: Nathaniel Parizi
  */
 
-#include <iostream>
-
+#include <bits/stdc++>
 using namespace std;
 
 int main() {
-
+	
 	int values[3];
-
 	values[0] = 1;
 	values[1] = 22;
 	values[2] = 33;
+	// print an array element
+        cout << values[3] << endl;
 
-	cout << values[3] << endl;
-
-	//short hand
+	//another way to define array
 	int valuesA[4] = { 1, 2, 4, 8 };
 
-	for (int i = 0; i < 4; i++) {
-
-		cout << valuesA[i] * valuesA[i] << endl;
+	for (int i = 0; i < 3; i++) {
+           // multiplication of array
+           cout << valuesA[i] * values[i] << endl;
 	}
-
+        // asisgn a array as empty
 	int emptyArr[8] = { };
 
 	for (int i = 0; i < 8; i++) {
-		cout << i + 1 << "  " << flush;
+		cout << i + 1 << setw(2) << flush;
 	}
 	cout << endl;
-	for (int i = 0; i < 8; i++) {
-
-		cout << emptyArr[i] * emptyArr[i] << ", " << flush;
-	}
-	//check
-	cout << endl;
+	//check strings
 	string texts[] = { "apples", "kiwi", "dragonfruit" };
-	cout << endl;
 
 	for (int i = 0; i < 3; i++) {
 
@@ -49,18 +41,14 @@ int main() {
 	cout << endl;
 
 	//*************************Mult-demensional arrays
-
+        //here in multi  dimension array,index should be define except the first index   
 	string animals[][3] = { { "fox", "dog", "wolf" }, { "lizard", "snake",
 			"turtle" } };
-
-	cout << "output of sizeof(animals[0] / sizeof(string): " << endl << ""
-			<< sizeof(animals[0]) / sizeof(string) << endl;
-	cout << endl;
 
 	for (int i = 0; i < 2; i++) {
 		for (int j = 0; j < 3; j++) {
 
-			cout << animals[i][j] << ", " << flush;
+			cout << animals[i][j] << ", ";
 
 		}
 
@@ -72,7 +60,10 @@ int main() {
 	cout << sizeof(valuesB[0]) << endl;  // 4 bytes of memory
 	cout << sizeof(valuesB) << endl; // 20 bytes of memory
 	cout << sizeof(int) << endl;     // 4 bytes
-
+        // length of an array
+	cout << sizeof(valuesB)/sizeof(valuesB[0]);
+	// length of array by using pointer
+	cout << *(&valuesB + 1) - valuesB;
 	// int for index  must be unsigned in this circumstance
 	for (unsigned int i = 0; i < sizeof(valuesB) / sizeof(int); i++) {
 		cout << valuesB[i] << ", " << flush;
@@ -97,8 +88,9 @@ int main() {
 		cout << "Hello 1" << endl;
 		break;
 	case 3:
-		cout << "Hello 1" << endl;
+		cout << "Hello 3" << endl;
 		break;
+        // IF INPUT OTHER THAN 0, 1 & 3			
 	default:
 		cout << "Default" << endl;
 	}
